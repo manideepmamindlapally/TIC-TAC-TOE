@@ -48,9 +48,10 @@ char GameBoard::getValue(int row, int column)
 //check whether a row is won
 int GameBoard::checkRow()
 {	
-	int row, column, flag=1;
+	int row, column, flag;
 	for(row=0; row<SIZE; row++)
 	{	
+		flag = 1;
 		//check all colums of a given row
 		for(column=1; column<SIZE; column++)
 		{
@@ -76,9 +77,10 @@ int GameBoard::checkRow()
 //check whether a column is won
 int GameBoard::checkColumn()
 {	
-	int row, column, flag=1;
+	int row, column, flag;
 	for(column=0; column<SIZE; column++)
 	{
+		flag = 1;
 		//check all rows of a given column
 		for(row=1; row<SIZE; row++)
 		{
